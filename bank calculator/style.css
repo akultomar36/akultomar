@@ -1,0 +1,111 @@
+.head{
+    text-align: center;
+    color: black;
+    background-color: rgba(83, 81, 81, 0.205);
+}
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.bank-balance-display {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 100px;
+  box-sizing: border-box;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  color: white;
+}
+
+
+.heading1,
+.heading2,
+.heading3 {
+  font-size: 22px;
+  font-weight: 400;
+  font-family: 'Roboto Slab', serif;
+}
+
+.heading1 {
+  background-color: #196a9f;
+}
+.heading2 {
+  background-color: #196a9f;
+}
+.heading3 {
+  background-color: #196a9f;
+}
+
+.bg-1 {
+  background-color: white;
+}
+
+.bg-2 {
+  background-color: white;
+}
+
+.bg-3 {
+  background-color: white;
+}
+
+table {
+  border-radius: 5px;
+}
+table,
+th,
+tr,
+td {
+  border: 2px solid #242424;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 20px;
+}
+td input {
+  width: 80%;
+  height: 25px;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  color: black;
+  position: relative;
+  right: -20px;
+}
+.text {
+    color: black;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+button {
+  margin: 20px;
+  padding: 10px 20px;
+  width: 80%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 23px;
+  color: rgb(181, 38, 38);
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: #060303;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: #c73f46;
+}
