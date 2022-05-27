@@ -25,14 +25,19 @@ button{
     margin: 5px;
 }
 .third{
-    border :solid;
-   border-color: white;
-    border-radius: 5%;
+    width: 100%;
+   border-color: black;
+   
     border-width: 40px;  
+    
 }
 .fourth{
-    border: solid;
-    align-items: center;
-    border-color: blue;
+   
+   right: 0%;
+    text-align: center;
+    border-color: rgb(8, 132, 74);
+}
+.img{
+    image-resolution: 100%;
 }
 
