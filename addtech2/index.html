@@ -7,37 +7,24 @@
    
 <body>
     <script>
-       const fs = require("fs");
-const string = fs.readFileSync("output.txt", "utf-8");
-
-let stack = [];
-let push = (data) => {
-    stack.push(data);
-}
-
-let pop = () => {
-    stack.pop();
-}
-
-let peek = () => {
-    return stack[stack.length - 1];
-}
-
-let empty = () => {
-    return stack.length > 0 ? false : true;
-}
+      let stack = [];
 
 for (let i = 0; i < string.length; i++) {
-    if (empty()) {
-        push(string[i]);
-    } else if (string[i] === peek()) {
-        pop();
+    if (stack.length === 0) {
+        stack.push(string[i]);
+    } else if (stack[stack.length - 1] === '(' && string[i] === ')') {
+        stack.pop();
+    } else if (stack[stack.length - 1] === '{' && string[i] === '}') {
+        stack.pop();
+    } else if (stack[stack.length - 1] === '[' && string[i] === ']') {
+        stack.pop();
     } else {
-        push(string[i]);
+        stack.push(string[i]);
     }
 }
 
-let ans = empty() ? "valid" : "invalid";
+console.log(stack);
+let ans = !stack.length ? "valid" : "invalid";
 
 console.log(ans);
         
