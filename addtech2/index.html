@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<body>
+    <script>
+       const fs = require("fs");
+const string = fs.readFileSync("output.txt", "utf-8");
+
+let stack = [];
+let push = (data) => {
+    stack.push(data);
+}
+
+let pop = () => {
+    stack.pop();
+}
+
+let peek = () => {
+    return stack[stack.length - 1];
+}
+
+let empty = () => {
+    return stack.length > 0 ? false : true;
+}
+
+for (let i = 0; i < string.length; i++) {
+    if (empty()) {
+        push(string[i]);
+    } else if (string[i] === peek()) {
+        pop();
+    } else {
+        push(string[i]);
+    }
+}
+
+let ans = empty() ? "valid" : "invalid";
+
+console.log(ans);
+        
+    </script>
+</body>
+</html>
