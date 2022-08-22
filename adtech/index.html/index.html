@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<body>
+    <script>
+const fs = require("fs");
+const input = fs.readFileSync("output.txt", "utf-8");
+let array = input.split(" ");
+array = array.map(elem => Number(elem));
+let repeatedNum = 0;
+
+for (let i = 0; i < array.length; i++) {
+    let flag = false;
+    if (!flag) {
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[i] === array[j]) {
+                repeatedNum = array[i];
+                flag = true;
+                break;
+            }
+        }
+    }
+}
+
+console.log(repeatedNum);
+     
+    </script>
+</body>
+</html>
+
